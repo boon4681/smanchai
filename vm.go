@@ -477,8 +477,12 @@ func (vm *VM) Run() (*Data, error) {
 		}
 		vm.pc++
 	}
-	if operand.Len() > 0 && vm.Dg {
-		fmt.Printf("Result %s\n", operand.Pop().String())
+	if operand.Len() > 0 {
+		result := operand.Pop()
+		if vm.Dg {
+			fmt.Printf("Result %s\n", result)
+		}
+		return result, nil
 	}
 	return nil, nil
 }
