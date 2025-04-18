@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/boon4681/smanchai"
+	"github.com/boon4681/smanchai/vm"
 )
 
 func main() {
